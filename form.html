@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software Developer Test</title>
+</head>
+<body>
+    <div style="border: 1px solid #ddd; padding: 20px; margin: 0 auto; width: fit-content; border-radius: 5px;">
+        <form method="post" action="/">
+            <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Nama:</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 3px;">
+            <br>
+            <label for="dob" style="display: block; margin-bottom: 5px; font-weight: bold;">Tanggal Lahir:</label>
+            <input type="text" id="dob_day" name="dob_day" placeholder="DD" required style="width: 30px; padding: 8px; border: 1px solid #ccc; border-radius: 3px;">
+            <input type="text" id="dob_month" name="dob_month" placeholder="MM" required style="width: 30px; padding: 8px; border: 1px solid #ccc; border-radius: 3px;">
+            <input type="text" id="dob_year" name="dob_year" placeholder="YYYY" required style="width: 60px; padding: 8px; border: 1px solid #ccc; border-radius: 3px;">
+            <br>
+            <input type="submit" name="submit" value="Submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+        </form>
+
+        {{if .Name}}
+            <div>
+                <p>Hallo {{.Name}},</p>
+                <p>Usia anda saat ini adalah: {{.AgeYears}} Tahun, {{.AgeMonths}} Bulan, {{.AgeDays}} Hari</p>
+                <p>Bintang anda adalah {{.Zodiac}}</p>
+            </div>
+        {{end}}
+    </div>
+</body>
+</html>
